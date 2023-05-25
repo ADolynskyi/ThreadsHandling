@@ -32,22 +32,17 @@ static CopyOnWriteArrayList<String> list =new CopyOnWriteArrayList<>();
         });
 
         List<ProcessThread> threads = new ArrayList<>();
-        threads.add(fizzbuzz);
-        threads.add(fizz);
-        threads.add(buzz);
-        threads.add(number);
-
-
+            threads.add(fizzbuzz);
+            threads.add(fizz);
+            threads.add(buzz);
+            threads.add(number);
         for (ProcessThread thread: threads){
             thread.start();
         }
-
         for (int i = 1; i <=maxNumber ; i++) {
             for (ProcessThread thread : threads) {
                 thread.process(i);
             }
-
-
             while (true) {
                 int processedCounter = 0;
                 for (ProcessThread thread : threads) {

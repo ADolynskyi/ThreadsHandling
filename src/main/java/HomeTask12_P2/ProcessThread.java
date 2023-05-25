@@ -19,16 +19,10 @@ public class ProcessThread extends Thread {
     @Override
     public void run(){
         while(true) {
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
             if (processed.get()) {
                 continue;
             }
             processor.process(number);
-
             processed.set(true);
 
         }
