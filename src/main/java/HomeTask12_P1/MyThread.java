@@ -1,4 +1,4 @@
-package org.example;
+package HomeTask12_P1;
 
 public class MyThread extends Thread{
     @Override
