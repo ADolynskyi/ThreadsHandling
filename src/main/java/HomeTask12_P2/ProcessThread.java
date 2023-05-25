@@ -20,7 +20,7 @@ public class ProcessThread extends Thread {
     public void run(){
         while(true) {
             try {
-                Thread.sleep(100);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
